@@ -12,6 +12,12 @@
 		4B22D2F11DC2EBFC00DC67A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B22D2EF1DC2EBFC00DC67A3 /* Main.storyboard */; };
 		4B22D2F31DC2EBFC00DC67A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B22D2F21DC2EBFC00DC67A3 /* Assets.xcassets */; };
 		4B22D2F61DC2EBFC00DC67A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B22D2F41DC2EBFC00DC67A3 /* LaunchScreen.storyboard */; };
+		4B22D2FF1DC2ECAE00DC67A3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B22D2FE1DC2ECAE00DC67A3 /* LoginViewController.swift */; };
+		4B22D3021DC2F29D00DC67A3 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B22D3011DC2F29D00DC67A3 /* UserDefaultsWrapper.swift */; };
+		4B22D3061DC2F64300DC67A3 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B22D3051DC2F64300DC67A3 /* ChatViewController.swift */; };
+		4B22D3081DC2F79000DC67A3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B22D3071DC2F79000DC67A3 /* SignUpViewController.swift */; };
+		4B22D30A1DC3042B00DC67A3 /* ChatMessageCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B22D3091DC3042B00DC67A3 /* ChatMessageCellTableViewCell.swift */; };
+		77530A39E8BB699F3DB0BB20 /* Pods_Parse_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839E99DF60AC4A5410784C10 /* Pods_Parse_Client.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,14 @@
 		4B22D2F21DC2EBFC00DC67A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B22D2F51DC2EBFC00DC67A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B22D2F71DC2EBFC00DC67A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B22D2FE1DC2ECAE00DC67A3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4B22D3011DC2F29D00DC67A3 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
+		4B22D3051DC2F64300DC67A3 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		4B22D3071DC2F79000DC67A3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4B22D3091DC3042B00DC67A3 /* ChatMessageCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCellTableViewCell.swift; sourceTree = "<group>"; };
+		582060090D9FDABC5B8CE585 /* Pods-Parse-Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parse-Client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Parse-Client/Pods-Parse-Client.debug.xcconfig"; sourceTree = "<group>"; };
+		839E99DF60AC4A5410784C10 /* Pods_Parse_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Parse_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA5F11A8E8588958442537B9 /* Pods-Parse-Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parse-Client.release.xcconfig"; path = "Pods/Target Support Files/Pods-Parse-Client/Pods-Parse-Client.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77530A39E8BB699F3DB0BB20 /* Pods_Parse_Client.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		005E8B16BCB49E15C69D6A15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				839E99DF60AC4A5410784C10 /* Pods_Parse_Client.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4B22D2DF1DC2EBFC00DC67A3 = {
 			isa = PBXGroup;
 			children = (
 				4B22D2EA1DC2EBFC00DC67A3 /* Parse-Client */,
 				4B22D2E91DC2EBFC00DC67A3 /* Products */,
+				DE79E41ABA42C40D1C92644E /* Pods */,
+				005E8B16BCB49E15C69D6A15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +79,44 @@
 		4B22D2EA1DC2EBFC00DC67A3 /* Parse-Client */ = {
 			isa = PBXGroup;
 			children = (
+				4B22D3091DC3042B00DC67A3 /* ChatMessageCellTableViewCell.swift */,
+				4B22D3001DC2F25500DC67A3 /* Utils */,
+				4B22D2FD1DC2EC9C00DC67A3 /* ViewControllers */,
 				4B22D2EB1DC2EBFC00DC67A3 /* AppDelegate.swift */,
-				4B22D2ED1DC2EBFC00DC67A3 /* ViewController.swift */,
 				4B22D2EF1DC2EBFC00DC67A3 /* Main.storyboard */,
 				4B22D2F21DC2EBFC00DC67A3 /* Assets.xcassets */,
 				4B22D2F41DC2EBFC00DC67A3 /* LaunchScreen.storyboard */,
 				4B22D2F71DC2EBFC00DC67A3 /* Info.plist */,
 			);
 			path = "Parse-Client";
+			sourceTree = "<group>";
+		};
+		4B22D2FD1DC2EC9C00DC67A3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B22D2ED1DC2EBFC00DC67A3 /* ViewController.swift */,
+				4B22D2FE1DC2ECAE00DC67A3 /* LoginViewController.swift */,
+				4B22D3051DC2F64300DC67A3 /* ChatViewController.swift */,
+				4B22D3071DC2F79000DC67A3 /* SignUpViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4B22D3001DC2F25500DC67A3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4B22D3011DC2F29D00DC67A3 /* UserDefaultsWrapper.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		DE79E41ABA42C40D1C92644E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				582060090D9FDABC5B8CE585 /* Pods-Parse-Client.debug.xcconfig */,
+				BA5F11A8E8588958442537B9 /* Pods-Parse-Client.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +126,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B22D2FA1DC2EBFC00DC67A3 /* Build configuration list for PBXNativeTarget "Parse-Client" */;
 			buildPhases = (
+				BF0920568A9E8415BD1A8A9B /* [CP] Check Pods Manifest.lock */,
 				4B22D2E41DC2EBFC00DC67A3 /* Sources */,
 				4B22D2E51DC2EBFC00DC67A3 /* Frameworks */,
 				4B22D2E61DC2EBFC00DC67A3 /* Resources */,
+				BDBAC1BD1E4424B398CAC14D /* [CP] Embed Pods Frameworks */,
+				D1020496EF8F627D62C3CCC1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +154,8 @@
 				TargetAttributes = {
 					4B22D2E71DC2EBFC00DC67A3 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = EVL2DEPTTR;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,12 +191,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BDBAC1BD1E4424B398CAC14D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Parse-Client/Pods-Parse-Client-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF0920568A9E8415BD1A8A9B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D1020496EF8F627D62C3CCC1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Parse-Client/Pods-Parse-Client-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4B22D2E41DC2EBFC00DC67A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B22D3081DC2F79000DC67A3 /* SignUpViewController.swift in Sources */,
+				4B22D3021DC2F29D00DC67A3 /* UserDefaultsWrapper.swift in Sources */,
+				4B22D2FF1DC2ECAE00DC67A3 /* LoginViewController.swift in Sources */,
 				4B22D2EE1DC2EBFC00DC67A3 /* ViewController.swift in Sources */,
+				4B22D3061DC2F64300DC67A3 /* ChatViewController.swift in Sources */,
+				4B22D30A1DC3042B00DC67A3 /* ChatMessageCellTableViewCell.swift in Sources */,
 				4B22D2EC1DC2EBFC00DC67A3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +369,10 @@
 		};
 		4B22D2FB1DC2EBFC00DC67A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 582060090D9FDABC5B8CE585 /* Pods-Parse-Client.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EVL2DEPTTR;
 				INFOPLIST_FILE = "Parse-Client/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zkhaider.Parse-Client";
@@ -268,8 +383,10 @@
 		};
 		4B22D2FC1DC2EBFC00DC67A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA5F11A8E8588958442537B9 /* Pods-Parse-Client.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EVL2DEPTTR;
 				INFOPLIST_FILE = "Parse-Client/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zkhaider.Parse-Client";
@@ -297,6 +414,7 @@
 				4B22D2FC1DC2EBFC00DC67A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

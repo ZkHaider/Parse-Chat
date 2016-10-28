@@ -1,0 +1,18 @@
+PODS:
+  - Bolts/Tasks (1.8.4)
+  - KRProgressHUD (2.0.0)
+  - Parse (1.14.2):
+    - Bolts/Tasks (~> 1.8)
+
+DEPENDENCIES:
+  - KRProgressHUD
+  - Parse
+
+SPEC CHECKSUMS:
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  KRProgressHUD: fa77b02194e532579579d5f0953282dab1c961c5
+  Parse: 4335d65f40cb3d43190d723144bbe1afb9c38230
+
+PODFILE CHECKSUM: ec5fdf779744ef7c23a39a35ce605693051de903
+
+COCOAPODS: 1.0.1

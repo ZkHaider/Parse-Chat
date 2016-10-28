@@ -17,6 +17,7 @@
 		4B22D3061DC2F64300DC67A3 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B22D3051DC2F64300DC67A3 /* ChatViewController.swift */; };
 		4B22D3081DC2F79000DC67A3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B22D3071DC2F79000DC67A3 /* SignUpViewController.swift */; };
 		4B22D30A1DC3042B00DC67A3 /* ChatMessageCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B22D3091DC3042B00DC67A3 /* ChatMessageCellTableViewCell.swift */; };
+		4B30A94D1DC306AE00A03867 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B30A94C1DC306AE00A03867 /* Message.swift */; };
 		77530A39E8BB699F3DB0BB20 /* Pods_Parse_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839E99DF60AC4A5410784C10 /* Pods_Parse_Client.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		4B22D3051DC2F64300DC67A3 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		4B22D3071DC2F79000DC67A3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4B22D3091DC3042B00DC67A3 /* ChatMessageCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCellTableViewCell.swift; sourceTree = "<group>"; };
+		4B30A94C1DC306AE00A03867 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		582060090D9FDABC5B8CE585 /* Pods-Parse-Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parse-Client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Parse-Client/Pods-Parse-Client.debug.xcconfig"; sourceTree = "<group>"; };
 		839E99DF60AC4A5410784C10 /* Pods_Parse_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Parse_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5F11A8E8588958442537B9 /* Pods-Parse-Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parse-Client.release.xcconfig"; path = "Pods/Target Support Files/Pods-Parse-Client/Pods-Parse-Client.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				4B22D2F21DC2EBFC00DC67A3 /* Assets.xcassets */,
 				4B22D2F41DC2EBFC00DC67A3 /* LaunchScreen.storyboard */,
 				4B22D2F71DC2EBFC00DC67A3 /* Info.plist */,
+				4B30A94C1DC306AE00A03867 /* Message.swift */,
 			);
 			path = "Parse-Client";
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				4B22D2FF1DC2ECAE00DC67A3 /* LoginViewController.swift in Sources */,
 				4B22D2EE1DC2EBFC00DC67A3 /* ViewController.swift in Sources */,
 				4B22D3061DC2F64300DC67A3 /* ChatViewController.swift in Sources */,
+				4B30A94D1DC306AE00A03867 /* Message.swift in Sources */,
 				4B22D30A1DC3042B00DC67A3 /* ChatMessageCellTableViewCell.swift in Sources */,
 				4B22D2EC1DC2EBFC00DC67A3 /* AppDelegate.swift in Sources */,
 			);

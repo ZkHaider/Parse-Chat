@@ -16,7 +16,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var multiLineTextField: UITextField!
     @IBOutlet weak var chatTableViewBottomConstaint: NSLayoutConstraint!
     
-    var messages: [NSDictionary] = []
+    var messages: [Message]?
     
     let refreshControl: UIRefreshControl = UIRefreshControl()
     
@@ -26,6 +26,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        chatTableView.delegate = self
+        chatTableView.dataSource = self
 
         // Do any additional setup after loading the view.
         sendButton.layer.cornerRadius = 8.0
@@ -92,20 +95,29 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @objc private func onChatMessagesRefreshFromTimer() {
         
+        print("Timer ")
+        
         // Load from parse
         let query = PFQuery(className: "Message")
-        query.findObjectsInBackground(block: { (pfObject, error) in
+        query.findObjectsInBackground(block: { (pfObjects, error) in
          
             if error != nil {
                 
                 // We failed kill yourself
             } else {
                 
+                // Reinit the array
+                self.messages = []
+                
                 // Do something with results
-                if let objects = pfObject as? PFObject {
+                if let objects = pfObjects {
                     for object in objects {
-                        print(object.objectId)
+                        if let text = object["text"] {
+                            self.messages?.append(Message.init(text: text as! String))
+                        }
                     }
+                    
+                    self.chatTableView.reloadData()
                 }
             }
         })
@@ -113,12 +125,24 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let chatCell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath)
+        let chatCell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath) as! ChatMessageCellTableViewCell
         
         // Grab our message
+        let message = messages?[indexPath.row]
+        if message != nil {
+            chatCell.setMessage(message: message!)
+        }
         
+        return chatCell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if messages != nil {
+            print(messages!.count)
+            return messages!.count
+        }
         
-        return nil
+        return 0
     }
     
     /*

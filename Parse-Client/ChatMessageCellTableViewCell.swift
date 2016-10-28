@@ -10,8 +10,14 @@ import UIKit
 
 class ChatMessageCellTableViewCell: UITableViewCell {
     
-    func setMessage(chatMessage: NSDictionary) {
+    @IBOutlet weak var messageLabel: UILabel!
+    
+    func setMessage(message: Message) {
         
+        // Go ahead and set our message
+        if message.message != nil {
+            self.messageLabel.text = message.message
+        }
     }
 
     override func awakeFromNib() {
